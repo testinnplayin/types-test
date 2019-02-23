@@ -12,6 +12,8 @@ fn main() {
     let f:usize = calculate_fibonnaci(n);
 
     println!("The fibonnaci of n = {} is {}", n, f);
+
+    sing_twelve_days_o_xmas();
 }
 
 fn convert_c_to_f(t: i32) -> i32 {
@@ -41,4 +43,47 @@ fn calculate_fibonnaci(n: usize) -> usize {
         }
         f
     }
+}
+
+fn sing_twelve_days_o_xmas() {
+    let lyrics = [
+        "A partridge in a pear tree",
+        "Two turtle doves",
+        "Three French hens",
+        "Four calling birds",
+        "Five gold rings",
+        "Six geese a-laying",
+        "Seven swans a-swimming",
+        "Eight maids a-milking",
+        "Nine ladies dancing",
+        "Ten lords a-leaping",
+        "Eleven pipers piping",
+        "Twelve drummers drumming"
+    ];
+    let days = [
+        "first",
+        "second",
+        "third",
+        "fourth",
+        "fifth",
+        "six",
+        "seventh",
+        "eighth",
+        "ninth",
+        "tenth",
+        "eleventh",
+        "twelfth"
+    ];
+
+    let mut ind = 1;
+    // const MAX:u8 = 11;
+
+    for day in days.iter() {
+        println!("On the {} day of Christmas my true love sent to me", day);
+        for i in (0..ind).rev() {
+            println!("{}", lyrics[i]);
+        }
+        ind = ind + 1;
+    }
+
 }
