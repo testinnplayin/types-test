@@ -1,0 +1,7 @@
+[package]
+name = "types-test"
+version = "0.1.0"
+authors = ["R Wood <archaurore@gmail.com>"]
+edition = "2018"
+
+[dependencies]
